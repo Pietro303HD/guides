@@ -52,5 +52,77 @@ h1 {
     <img src="werewolf.png" class="center">
 </div>
 
+<h1>1. Fetching the assets</h1>
+
+<div>
+    <p>It's time for the fun stuff! We can't have a zombie without sprites or animations, so we will be getting those directly from PVZ2C. You can find the Chinese obb <a href="https://drive.google.com/file/d/1LU64jPTxosIXzOZFSepD1KCYK5XxtyXQ/view">here.</a></p>
+    <p>After you've downloaded it, use your archiver of choice (such as WinRar or 7-zip) and open that .ipa file.</p>
+    <p>Hop into the newly made folder and you should have this.</p>
+    <img src="ipa.png" class="center">
+    <p>First, rename this folder and remove all of the chinese characters.</p>
+    <p>What matters most to us here is the main.rsb, found in Payload/PvZ2.app.</p>
+    <p>Extract it with SPCUtil like you would any other obb.</p>
+    <p>(Note: Extracting packages is not needed and will just result in an error from SPCUtil)</p>
+    <p>Congratulations, you're in. Grab the files from your zombie of choice.</p>
+    <p>In my case, it's these. Copy and paste these files to your mod's Packet folder.</p>
+    <img src="rsgp.png" class="center">
+</div>
+
+<h1>2. Resources, ResInfo and StructInfo</h1>
+
+<div>
+    <p>If you didn't already know, these files store information about the game's assets.</p>
+    <p>As such, we need to get their Chinese info to bring over to our mod.</p>
+    <p>Such information can be found in __MANIFESTGROUP__.rsgp, extract it like normal.</p>
+    <p>Inside you'll find RESURCES.RTON, and that's our target.</p>
+    <p>I'm tired of repeating "extract it", hopefully you know the drill by now.</p>
+    <p>Open it up and look for your zombie.</p>
+    <p>You'll find something similar to this. Copy all of it.</p>
+    <img src="resources.png" class="center">
+    <p>Afterwards, go to your mod's folder, head into Res > PROPERTIES to find RESOURCES.RTON.</p>
+    <p>Open it and just paste the stuff. Make sure to check for missing commas!</p>
+    <p>Now, I have a confession to make. RESOURCES.json sucks ass. There's an alternative to this however.</p>
+    <p>Here's what we're gonna do: Convert shitty RESOURCES into the awesome ResInfo.</p>
+    <p>Open it with SPCUtil and use this option. (It might not have the same number for you!)</p>
+    <p>Then, rename ~RESOURCES to ResInfo.</p>
+    <img src="resconvert.png" class="center">
+    <p>Actually I lied. The reason we're doing this is because of Slots.</p>
+    <p>Long story short, too complicated. However, there's an alternative solution.</p>
+    <p>If we convert Resources to ResInfo and then back to Resources, SPCUtil will do the boring work for us.</p>
+    <p>Open ResInfo with SPCUtil and convert it back to Resources.</p>
+    <p>Rename this new file back to RESOURCES.json and delete the old Resources.</p>
+    <p>Your folder should look like this:</p>
+    <img src="res.png" class="center">
+    <p>We're getting close to the end of this step.</p>
+    <p>Convert Resources to RTON and move ResInfo to your mod's folder, replace if needed.</p>
+    <p>You are officially done with resources.</p>
+    <p>Time for StructInfo.</p>
+    <p>If you've been paying attention to this tutorial so far, you should be able to do StructInfo on your own. Good luck!</p>
+</div>
+  
+<h1>3. ZombieTypes.</h1>
+
+<div>
+    <p>Great job, we're at the final stretch!</p>
+    <p>Go on, open up the file in your mod.</p>
+    <p>Copy and paste the code of a basic like this.</p>
+    <img src="zombietype.png" class="center">
+    <p>Firstly, change the alias and typename in order to not conflict with other zombies.</p>
+    <p>For ResourceGroups, replace ZombieTutorialGroup with your zombie's group.</p>
+    <p>You can find the name in ResInfo. In my case, it's ZombieWolfBossGroup.</p>
+    <img src="resgroup.png" class="center">
+    <p>While you're here, the POPANIM is also found in ResInfo.</p>
+    <img src="popanim.png" class="center">
+</div>
+
+<h1>End of The Line</h1>
+
+<div>
+    <p>Add your zombie to an easily accesible level so you can test it out.</p>
+    <p>Now, make sure everything is correct and pack the obb.</p>
+    <p>There's the man himself.</p>
+    <img src="result.jpg" class="center">
+</div>
+  
 </body>
 </html>
