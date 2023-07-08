@@ -61,36 +61,36 @@ h1 {
 <p>Open his spritesheets, I'll start off with 1536 for simplicity.</p>
 <p>Take your costume and just fit it in comfortably.</p>
 <p>Then, using your photo editor app, get his coordinates and dimensions.</p>
-<img src="<img src="coordinates.PNG" class="center">
+<img src="coordinates.png" class="center">
 <p>This might seem weird, but I'm going to use Hypercube's Spritesplitter (Link)</p>
 <p>Split the spritesheet with Option 1.</p>
 <p>You'll see your costume is missing.</p>
 <p>Head in .sprites.json</p>
-<img src="<img src="info.PNG" class="center">
+<img src="info.png" class="center">
 <p>This is one of the sprites. Copy everything shown and then paste it.</p>
 <p>Green is the sprite name, it doesn't matter what you call it as long as it is unique.</p>
 <p>Blue and red are the coordinates from earlier. Put them in.</p>
 <p>Ignore the last two numbers and save.</p>
-<img src="<img src="infoexample.PNG" class="center">
+<img src="infoexample.PNG" class="center">
 <p>Delete the .sprites folder and split the spritesheet using Option 2.</p>
 <p>If you did it correctly, you should be able to find your costume within the sprites!</p>
 <p>Now convert the spritesheet back to PTX. Meanwhile, do everything for 768.</p>
 <p>ALSO, do NOT delete the .sprites.json, you will need it for later.</p>
-<img src="<img src="rsgp.PNG" class="center">
+<img src="rsgp.PNG" class="center">
 </div>
 <h1>2. ResInfo</h1>
 <div>
 <p>Look who it is. The file that stores information about resources and spritesheets.</p>
 <p>All we have to do is look for our plant this time.</p>
-<img src="<img src="resinfo1.PNG" class="center">
+<img src="resinfo1.PNG" class="center">
 <p>Okay that's alot. Let me just focus on one sprite.</p>
-<img src="<img src="familiar.PNG" class="center">
+<img src="familiar.PNG" class="center">
 <p>This.. looks familiar. It's almost the same as imageinfo!</p>
 <p>Why don't we just... copy the values from imageinfo here?</p>
 <p>Alright time to stop pretending being dumb.</p>
 <p>This is why I told you to do ImageInfo. Just bring the values over from there.</p>
 <p>You'll have to do the same but for the 768 version. It's not hard.</p>
-<img src="<img src="resexample.PNG" class="center">
+<img src="resexample.PNG" class="center">
 </div>
 <h1>3. Animating</h1>
 <div>
@@ -98,7 +98,7 @@ h1 {
 <p>Plus I don't have the greatest experiences with pirating stuff like this.</p>
 <p>Search around the PvZ2 modding servers, you'll find it.</p>
 <p>With that out of the way, go to _Common.</p>
-<img src="<img src="pamlocation.PNG" class="center">
+<img src="pamlocation.PNG" class="center">
 <p>This is where the pain begins.</p>
 <p>Extract the pam.</p>
 <p>I'll be splitting this into multiple sections.</p>
@@ -109,13 +109,13 @@ h1 {
 <p>Each M_ is mapped to a sprite, while each A_ is mapped to a M_.</p>
 <p>For a costume, you need to add an M_ and a A_.</p>
 <p>Copy some already existing ones and change their values using a text editor.</p>
-<img src="<img src="M_.PNG" class="center">
+<img src="M_.PNG" class="center">
 <p>While you're here, you need sprites so you can view the animation.</p>
 <p>Back to 1536 we go. Edit the imageinfo according to DomDocument.xml</p>
-<img src="<img src="domdoc.PNG" class="center">
+<img src="domdoc.PNG" class="center">
 <p>For me, it was as simple as Find and Replace.</p>
 <p>Save the imageinfo, split with Option 2, then take the sprites from the folder and put them in Library.</p>
-<img src="<img src="spriteschilling.PNG" class="center">
+<img src="spriteschilling.PNG" class="center">
 </div>
 <h1>3.2. DomDocument.xml</h1>
 <div>
@@ -126,30 +126,30 @@ h1 {
 <div>
 <p>Just from the fact this is a JSON, I can already tell it's something PvZ2 uses.</p>
 <p>Oh! Coordinates! Wait.</p>
-<img src="<img src="weirdcoordinates.PNG" class="center">
+<img src="weirdcoordinates.PNG" class="center">
 <p>These don't match the spritesheet size...</p>
 <p>Yeah dummy, it's because they have their size (on the 1536 spritesheet) multiplied by 0,78125 and rounded.</p>
-<img src="<img src="normalweird.PNG" class="center">
+<img src="normalweird.PNG" class="center">
 <p>There we go. Moving on.</p>
 <p>Copy, paste and replace!</p>
-<img src="<img src="mmapper.PNG" class="center">
+<img src="mmapper.PNG" class="center">
 <p>Now, for the SubAnimMapper, you have to copy, paste and replace!</p>
 <p>Make your new A_ be mapped to "custom_02" or something. It doesn't really matter what.</p>
 </div>
 <h1>3.4. PropertySheets.json</h1>
 <div>
 <p>Uh, this is awkward. But I need you to go there for a second.</p>
-<img src="<img src="propsheets.PNG" class="center">
+<img src="propsheets.PNG" class="center">
 <p>This is the costume data. LayerName tells the animation which layer to show.</p>
 <p>It has to be the same thing you mapped in OtherInfo.</p>
 <p>Copy, paste and replace. AKA, unique ID, change the typename and the FriendlyName doesn't matter.</p>
-<img src="<img src="propexample.PNG" class="center">
+<img src="propexample.PNG" class="center">
 </div>
 <h1>3.5. Anim.xfl</h1>
 <div>
 <p>I left the worst for last. Sorry!</p>
 <p>Open this file in Animate. Click here.</p>
-<img src="<img src="amain.PNG" class="center">
+<img src="amain.PNG" class="center">
 <p>Create a new layer, rename it properly, and drag and drop your A_ to the canvas.</p>
 <p>Convert this layer to a frame-by-frame animation, and then done. Save the animation.</p>
 </div>
@@ -157,7 +157,7 @@ h1 {
 <div>
 <p>Phew, almost died from Adobe poisoning. Let's get back on track.</p>
 <p>Edit the DomDocument to include __ABOUT__="This XFL is convert from PAM file, By SPC-Util.", like so:</p>
-<img src="<img src="spcutil.PNG" class="center">
+<img src="spcutil.PNG" class="center">
 <p>Use SPCUTIL to convert the entire folder back to PAM.</p>
 <p>Now, convert everything you changed. And you should, hopefully, be good.</p>
 </div>
@@ -165,7 +165,7 @@ h1 {
 <div>
 <p>I love Shadow-Shroom.</p>
 <p>This is a floating image however. I can't exactly teach you how to animate.</p>
-<img src="<img src="result.jpg" class="center">
+<img src="result.jpg" class="center">
 </div>
   
 </body>
